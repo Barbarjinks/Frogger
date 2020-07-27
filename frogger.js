@@ -1,5 +1,5 @@
-class frogger {
-    const(){
+class Frogger {
+    constructor(){
         this.spriteWidth = 250;
         this.spriteHeight = 250;
         this.width = this.spriteWidth/5;
@@ -11,6 +11,20 @@ class frogger {
         this.frameY = 0;
     } 
     update(){
-        
+        if (keys[38]){
+            if (this.moving === false){
+                this.y -= grid;
+                this.moving = true;
+            }
+        }
+    }
+    draw(){
+        ctx3.fillStyle = 'green';
+        ctx3.fillRect(this.x, this.y,this.width, this.height);
+    }
+    jump(){
+    
     }
 }
+
+const frogger = new Frogger();
