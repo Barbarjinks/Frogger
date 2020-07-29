@@ -16,7 +16,7 @@ class Frogger {
                 this.y -= grid;
                 this.moving = true;
             }
-        }
+        };
         if (keys[40]){
             if (this.moving === false && this.y < canvas.height - this.height *2){
                     this.y += grid;
@@ -35,6 +35,7 @@ class Frogger {
                     this.moving = true;
                 }
         };
+        if (this.y < 0) scored();
     };
     draw(){
         ctx3.fillStyle = 'green';

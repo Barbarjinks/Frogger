@@ -2,9 +2,9 @@ function animate(){
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     frogger.draw();
     frogger.update();
+    handleObstacles();
     requestAnimationFrame(animate);
 }
-
 animate();
 
 window.addEventListener('keydown', function(e){
@@ -18,4 +18,11 @@ window.addEventListener('keydown', function(e){
 window.addEventListener('keyup', function(e){
     delete keys[e.keyCode];
     frogger.moving = false;
-})
+});
+
+function scored(){
+    score++;
+    gameSpeed += 0.05;
+    frogger.x = canvas.width/2 - frogger.width/2;
+    frogger.y = canvas.height - frogger.height - 40;
+}
