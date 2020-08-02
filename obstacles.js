@@ -48,6 +48,10 @@ function initObstacles(){
         logsArray.push(new Obstacle(x, canvas.height - grid * 5 - 20, grid * 2, grid, -2, 
         'log'));
     }
+    for (let i = 0; i < 3; i++){
+        let x = i * 200;
+        logsArray.push(new Obstacle(x, canvas.height - grid * 6 - 20, grid, grid, 1, 'turtle'));
+    }
 }
 initObstacles();
 
