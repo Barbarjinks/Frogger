@@ -8,7 +8,8 @@ class Obstacle {
         this.type = type;
     }
     draw(){
-        ctx1.fillRect(this.x, this.y, this.width, this.height);
+        ctx3.fillStyle = 'red';
+        ctx3.fillRect(this.x, this.y, this.width, this.height);
     }
     update(){
         this.x += this.speed * gameSpeed;
@@ -50,7 +51,8 @@ function initObstacles(){
     }
     for (let i = 0; i < 3; i++){
         let x = i * 200;
-        logsArray.push(new Obstacle(x, canvas.height - grid * 6 - 20, grid, grid, 1, 'turtle'));
+        logsArray.push(new Obstacle(x, canvas.height - grid * 6 - 20, grid, grid, 1, 
+        'turtle'));
     }
 }
 initObstacles();
