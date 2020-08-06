@@ -48,8 +48,16 @@ function handleScoreBoard(){
 }
 
 function collision(first, second){
-    return !( first.x > second.x * second.width || 
-            first.x * first.width < second.x || 
-            first.y > second.y > second.height ||
+    return !( first.x > second.x + second.width || 
+            first.x + first.width < second.x || 
+            first.y > second.y + second.height ||
             first.y + first.height < second.y);
+}
+
+function resetGame(){
+    frogger.x = canvas.width/2 - frogger.width/2;
+    frogger.y = canvas.height - frogger.height - 40;
+    score = 0;
+    gameSpeed = 1;
+    collisionsCount++;
 }
