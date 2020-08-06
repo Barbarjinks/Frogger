@@ -33,7 +33,7 @@ function scored(){
     gameSpeed += 0.05;
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height - 40;
-}
+};
 
 function handleScoreBoard(){
     ctx4.fillStyle = 'black';
@@ -45,19 +45,19 @@ function handleScoreBoard(){
     ctx4.font = '15px Verdana';
     ctx4.strokeText('Collisions: ' + collisionsCount, 10, 175);
     ctx4.strokeText('Game Speed: ' + gameSpeed.toFixed(1), 10, 195);
-}
+};
 
 function collision(first, second){
     return !( first.x > second.x + second.width || 
             first.x + first.width < second.x || 
             first.y > second.y + second.height ||
             first.y + first.height < second.y);
-}
+};
 
 function resetGame(){
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height - 40;
     score = 0;
-    gameSpeed = 1;
     collisionsCount++;
-}
+    gameSpeed = 1;
+};
