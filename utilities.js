@@ -8,9 +8,11 @@ function animate(){
     ctx2.drawImage(background_1v12, 0, 0, canvas.width, canvas.height);
     frogger.draw();
     frogger.update();
+
     handleObstacles();
     handleScoreBoard();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);
+    frame++;
     requestAnimationFrame(animate);
 }
 animate();
