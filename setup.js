@@ -53,5 +53,5 @@ const log = new Image();
 log.src = 'img/log.png';
 
 const car = new Image();
-car.src = 'img/car.png';
-let numberOfCars = 30;
+car.src = 'img/cars.png';
+let numberOfCars = 3;
