@@ -30,10 +30,8 @@ let score = 0;
 let collisionsCount = 0;
 let frame = 0;
 let gameSpeed = 1;
+let safe = false;
 
-const particlesArray = [];
-const maxParticles = 300;
-const ripplesArray = [];
 const carsArray = [];
 const logsArray = [];
 
@@ -55,3 +53,6 @@ log.src = 'img/log.png';
 const car = new Image();
 car.src = 'img/cars.png';
 let numberOfCars = 3;
+
+const ersel = new Image();
+ersel.src = 'img/ersel.png';
