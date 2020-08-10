@@ -39,8 +39,7 @@ class Frogger {
     };
     draw(){
         ctx3.fillStyle = 'green';
-        //ctx3.fillRect(this.x, this.y,this.width, this.height);
-        ctx3.drawImage(ersel, 0, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
+        ctx3.drawImage(frog, 0, 0, this.spriteWidth, this.spriteHeight, this.x - 25, this.y - 25, this.width * 2, this.height * 2);
     };
     jump(){
     

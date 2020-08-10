@@ -54,5 +54,5 @@ const car = new Image();
 car.src = 'img/cars.png';
 let numberOfCars = 3;
 
-const ersel = new Image();
-ersel.src = 'img/ersel.png';
+const frog = new Image();
+frog.src = 'img/frog_spritesheet.png';
